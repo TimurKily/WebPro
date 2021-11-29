@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#demo{
+			display: flex;
+		}
+		.date{
+			width: 115px;
+			height: 50px;
+			display: flex;
+			justify-content: center;
+			background-color: #02AA6D;
+			color: #fff;
+			margin-right: 10px;
+		}
+	</style>
+</head>
+<body>
+	<h2>JS new Date()</h2>
+	<p id="demo"></p>
+	<div id="demo">
+		<div class="date">
+			<p id="year"></p>
+		</div>
+		<div class="date">
+			<p id="month"></p>
+		</div>
+		<div class="date">
+			<p id="day"></p>
+		</div>
+		<div class="date">
+			<p id="hour"></p>
+		</div>
+		<div class="date">
+			<p id="minute"></p>
+		</div>
+		<div class="date">
+			<p id="second"></p>
+		</div>
+		<div class="date">
+			<p id="milliseconds"></p>
+		</div>
+	</div>
+	<script>
+		function date(){
+			const d=new Date();
+			document.getElementById("demo").innerHTML=d;
+			document.getElementById("year").innerHTML=`Year: ${d.getFullYear()}`;
+			document.getElementById("month").innerHTML=`Month: ${d.getMonth()}`;
+			document.getElementById("day").innerHTML=`Day: ${d.getDate()}`;
+			document.getElementById('hour').innerHTML=`Hours: ${d.getHours()}`;
+			document.getElementById('minute').innerHTML=`Minutes: ${d.getMinutes()}`;
+			document.getElementById('second').innerHTML=`Seconds: ${d.getSeconds()}`;
+			document.getElementById('milliseconds').innerHTML=`Miliseconds: ${d.getMilliseconds()}`
+		}
+		setInterval(date, 10)
+	</script>
+</body>
+</html>

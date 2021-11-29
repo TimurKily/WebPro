@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Comparison</title>
+</head>
+<body>
+	<h2>JS сравнения</h2>
+	<p>Введите свой возраст и нажмите на кнопку: </p>
+	<form action="https://www.example.com">
+		<input type="text" id="age" required>
+		<input type="submit" onclick="myFunction()">
+	</form>
+	<p id="demo"></p>
+	<script>
+		function myFunction(){
+			let age=Number(document.getElementById('age').value);
+			let voteable=(age<18) ? "Слишком молод":"Достаточно взрослый";
+
+			document.getElementById('demo').innerHTML=voteable+" чтобы голосовать";
+		}
+	</script>
+</body>
+</html>

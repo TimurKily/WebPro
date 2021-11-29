@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Table</title>
+	<style>
+		body{
+			display: flex;
+		}
+		table, th, td{
+			border-style: solid;
+			border-color: gray;
+			border-collapse: collapse;
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+		table{
+			margin-right: 25px;
+		}
+		.table-results td:nth-child(odd){
+			padding-right: 60vh;
+		}
+		.table-results td:nth-child(even){
+			padding-right: 30vh;
+		}
+		.table-grade td:nth-child(odd){
+			padding-right: 10vh;
+		}
+		.table-grade td:nth-child(even){
+			padding-right: 25vh;
+		}
+	</style>
+</head>
+<body>
+	<table class="table-results">
+		<tr>
+			<th>Student Name</th>
+			<th>Marks</th>
+		</tr>
+		<tr>
+			<td class="name">David</td>
+			<td class="value">80</td>
+		</tr>
+		<tr>
+			<td class="name">Vinoth</td>
+			<td class="value">77</td>
+		</tr>
+		<tr>
+			<td class="name">Divya</td>
+			<td class="value">88</td>
+		</tr>
+		<tr>
+			<td class="name">Ishitha</td>
+			<td class="value">95</td>
+		</tr>
+		<tr>
+			<td class="name">Thomas</td>
+			<td class="value">68</td>
+		</tr>		
+	</table>
+
+	<table class="table-grade">
+		<tr>
+			<th>Range</th>
+			<th>Grade</th>
+		</tr>
+		<tr>
+			<td><60</td>
+			<td>F</td>
+		</tr>
+		<tr>
+			<td><70</td>
+			<td>D</td>
+		</tr>
+		<tr>
+			<td><80</td>
+			<td>C</td>
+		</tr>
+		<tr>
+			<td><90</td>
+			<td>B</td>
+		</tr>
+		<tr>
+			<td><100</td>
+			<td>A</td>
+		</tr>
+	</table>
+	<script>
+		let s=0;
+		let body=document.body;
+		let tbl=document.createElement("table");
+    	tbl.style.borderStyle="solid";
+    	tbl.style.borderColor="gray";
+    	tbl.style.borderCollapse="collapse";
+
+		function grade(value){
+			if(value>90 && value<=100){
+				return 'A';
+			}
+			else if(value>80 && value<=90){
+				return 'B';
+			}
+			else if(value>70 && value<=80){
+				return 'C';
+			}
+			else if(value>60 && value<=70){
+				return 'D';
+			}
+			else{
+				return 'F';
+			}
+		}
+
+		for(let i=0; i<5; i++){
+			var name=document.querySelectorAll('.name')[i].innerHTML;
+			var value=grade(document.querySelectorAll('.value')[i].innerHTML);
+			var tr=tbl.insertRow();
+			for(let j=0; j<2; j++){
+				var td=tr.insertCell();
+				if(j==0) {
+					td.appendChild(document.createTextNode(name));
+					td.style.paddingRight="4vh";
+				}
+				else{
+					td.appendChild(document.createTextNode(value));
+					td.style.paddingRight="6vh";
+				}
+				td.style.borderStyle="solid";
+		    	td.style.borderColor="gray";
+		    	td.style.borderCollapse="collapse";
+			}
+		}
+		body.appendChild(tbl);
+	</script>
+</body>
+</html>

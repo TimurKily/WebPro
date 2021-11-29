@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Onkeyup</title>
+</head>
+<body>
+    <p>В этом примере показано, как назначить событие "onkeyup" элементу ввода</p>
+    <p>Нажми клавишу внутри текстового поля и отпусти, чтобы установить перевести текст в верхний регистр</p>
+    Введите ваше имя:<input type="text" id="fname" onkeyup="myFunction()">
+    <script>
+        function myFunction(){
+            var x=document.getElementById("fname");
+            x.value=x.value.toUpperCase();
+        }
+        document.getElementById('fname').addEventListener("keyup", myFunction);
+    </script>
+</body>
+</html>

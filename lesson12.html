@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Math Random</title>
+</head>
+<body>
+	<h2>Math.random()</h2>
+	<p>Каждый раз нажимая на эту кнопочку, функция будет возращать случайное число от 0 до 9</p>
+	<button onclick="document.getElementById('demo').innerHTML=getRndInteger(0, 10)">Click Me</button>
+	<p id="demo"></p>
+	<script>
+		function getRndInteger(min, max){
+			return Math.floor(Math.random()*(max-min))+min;
+		}
+	</script>
+</body>
+</html>

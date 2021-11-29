@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		#all-colors{
+			display: flex;
+			flex-direction: column;
+		}
+		.row{
+			display: flex;
+		}
+		.color{
+			width: 20%;
+			height: 33.3vh;
+			background-color: #000;
+		}
+	</style>
+	<link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+</head>
+<body>
+	<div id="all-colors">
+		<div class="row">
+			<div class="color" id="color1" onclick="color(event)"></div>
+			<div class="color" id="color2" onclick="color(event)"></div>
+			<div class="color" id="color3" onclick="color(event)"></div>
+			<div class="color" id="color4" onclick="color(event)"></div>
+			<div class="color" id="color5" onclick="color(event)"></div>		
+		</div>
+		<div class="row">
+			<div class="color" id="color6" onclick="color(event)"></div>
+			<div class="color" id="color7" onclick="color(event)"></div>
+			<div class="color" id="color8" onclick="color(event)"></div>
+			<div class="color" id="color9" onclick="color(event)"></div>
+			<div class="color" id="color10" onclick="color(event)"></div>	
+		</div>
+		<div class="row">
+			<div class="color" id="color11" onclick="color(event)"></div>
+			<div class="color" id="color12" onclick="color(event)"></div>
+			<div class="color" id="color13" onclick="color(event)"></div>
+			<div class="color" id="color14" onclick="color(event)"></div>
+			<div class="color" id="color15" onclick="color(event)"></div>	
+		</div>
+	</div>
+	<script>		
+		function color(event){
+			var x=Math.floor(Math.random()*256);
+			var y=Math.floor(Math.random()*256);
+			var z=Math.floor(Math.random()*256);
+			document.getElementById(event.target.id).style.backgroundColor='rgb('+x+','+y+','+z+')';
+		}
+	</script>
+</body>
+</html>

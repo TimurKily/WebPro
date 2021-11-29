@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">	
+	<title>Document</title>
+</head>
+<body>
+	<h2>Методы массива JS</h2>
+	<h2>splice()</h2>
+	<p>Метод splice() добавляет новые элементы в массив</p>
+
+	<button onclick="myFunction()">Попробовать</button>
+
+	<p id="demo1"></p>
+	<p id="demo2"></p>
+	<p id="demo3"></p>
+	<script>
+		const fruits=["Banana", "Orange", "Apple", "Mango"];
+		document.getElementById("demo1").innerHTML="Изначальный массив:<br>"+fruits;
+		function myFunction(){
+			let removed=fruits.splice(2, 2, "Lemon", "Kiwi");
+			document.getElementById("demo2").innerHTML="Новый массив:<br>"+fruits;
+			document.getElementById("demo3").innerHTML="Удаленные элементы:<br>"+removed;
+		}
+	</script>
+</body>
+</html>

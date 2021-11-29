@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<h2>JS массивы</h2>
+	<p>Лучший способ перебрать массивы - использовать цикл for</p>
+	<p id="demo"></p>
+	<p id="vegetables"></p>
+	<script>
+		function myFunction(value){
+			text+="<li>"+value+"</li>";
+		}
+		const fruits=["Banana", "Orange", "Apple", "Mango"];
+		let fLen=fruits.length;
+		let text="<ul>";
+		fruits.forEach(myFunction);
+		text+="</ul>";
+		document.getElementById("demo").innerHTML=text;
+
+		const vegetables=["Cucumber", "Peper", "Tomato", "Cabbage"];
+		let vLen=vegetables.length;
+		text="<ol>";
+		vegetables.forEach(myFunction);
+		text+="</ol>";
+		document.getElementById('vegetables').innerHTML=text;
+	</script>
+</body>
+</html>

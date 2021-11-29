@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<h2>Unshift JS</h2>
+	<p>Он вставляет элемент в начало массива</p>
+	<p id="demo1"></p>
+	<p id="demo2"></p>
+	<script>
+		var myArray=["Apple", "Mango", "Banana", "Orange"];
+		document.getElementById('demo1').innerHTML=myArray;
+		myArray.unshift("Kiwi", "Pear");
+		document.getElementById("demo2").innerHTML=myArray;
+	</script>
+</body>
+</html>

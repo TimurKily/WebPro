@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Дз #3</title>
+</head>
+<body>
+    <p>В этом примере показаны свойства "keyup" и "keydown"</p>
+    <input type="text" id="demo" placeholder="Нажми на любую клавишу">
+    <script>
+        document.getElementById("demo").addEventListener("keyup", function(event){
+            var para=document.createElement("p");
+            var text=document.createTextNode(`type=${event.type} key=${event.key} code=${event.code}\n`);
+            para.appendChild(text);
+            document.body.appendChild(para);
+        });
+    </script>
+</body>
+</html>

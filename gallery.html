@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Gallery</title>
+	<style>
+		body {
+			background-color: #ADD9E6;
+		}
+		h1 {
+			text-align: center;
+		}
+		#images {
+			text-align: center;
+		}
+		#images img {
+			width: 290px;
+			height: 170px;
+			margin-top: 30px;
+			margin-right: 30px;
+		}
+		.add{
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<h1>Галерея изображений</h1>
+	<div class="add">
+		<input type="text" id="url" placeholder="https://example.com">
+		<button id="submit" onclick="add()">Добавить</button>
+	</div>
+	<div id="images">
+		<img src="https://s1.tchkcdn.com/i/17/1/266032_441bec12_3dd_25024200_140427203404295_5925803933485236224_n.jpg" alt="Картинка">
+		<img src="https://studyinchinas.com/wp-content/uploads/2019/06/china5-e1560531163573.jpg" alt="">
+		<img src="https://www.tripzaza.com/ru/destinations/wp-content/uploads/2018/06/11-Li_River-e1528946859381.jpg" alt="">
+		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHmrdnb0bRdOkJLCAM_qJ9XnxK4Jdxhq0XUA&usqp=CAU" alt="">
+		<img src="https://s1.tchkcdn.com/i/17/1/266032_441bec12_3dd_25024200_140427203404295_5925803933485236224_n.jpg" alt="Картинка">
+		<img src="https://studyinchinas.com/wp-content/uploads/2019/06/china5-e1560531163573.jpg" alt="">
+		<img src="https://www.tripzaza.com/ru/destinations/wp-content/uploads/2018/06/11-Li_River-e1528946859381.jpg" alt="">
+		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHmrdnb0bRdOkJLCAM_qJ9XnxK4Jdxhq0XUA&usqp=CAU" alt="">
+	</div>
+	<script>
+		function add(){
+			var img=document.createElement("img");
+			var url=document.getElementById("url").value;
+			img.src=url;
+			document.getElementById("images").appendChild(img);
+		}
+	</script>
+</body>
+</html>
